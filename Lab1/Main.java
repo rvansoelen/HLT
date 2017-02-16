@@ -10,13 +10,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.xml.stream.XMLInputFactory;
-import javax.xml.stream.XMLStreamException;
-import javax.xml.stream.XMLStreamReader;
-
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
 public class Main {
 	
 	public static void main(String [ ] args) throws IOException, XMLStreamException
