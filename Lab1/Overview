@@ -1,0 +1,10 @@
+This file starts by prompting the user to enter a file to parse.  If none is given, it has a default file it uses.  It uses StremTokenizer to
+get words from the document, and uses '<' and '>' to determine the begining and end of paragraph(documents).  Once it finds a word in a 
+paragraph, it gets the map entry stored for that word, or creates a new one if there isn't one.  Entries are two member lists, where the first 
+index is the collection frequency and the second is the document frequency.  Using a List to store exactly two integers probably isn't the 
+best way to do it, but I didn't know what the best way was in Java and it worked.  I used a second map, isInDoc, to keep track of whether a 
+certain word has already been found in a document.  If a word didn't exist in isInDoc, I would increment its document frequency and the 
+collection frequency, otherwise I would just increment its collection frequency.  Again, there are probably better ways to do it than use a 
+second map.  After the collection and document frequencies are counted, the map is converted into a list and sorted by collection frequency.
+The top 30 entries are printed, then I print the 100th, 500th, and 1,000th word.  Finally, I print the count of all the words with only 1 
+occurrence.
